@@ -1,0 +1,129 @@
+
+    /*Mobile first */
+*{
+    padding: 0;
+    bottom: 0;
+    font-family: sans-serif;
+}
+html{
+    height: 100vh;
+    width: 100vw;
+}
+
+body{
+    background-color: rgba(255, 255, 255, 0.758);
+    background-image: url(midia/imagens/back-phone.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    background-color: rgba(255, 255, 255, 0.795);
+    color: white;
+    text-shadow: 5px 5px 3px rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 10px;
+    
+}
+
+#phone:hover{
+scale: 1.2;
+transition: 0.5s;
+}
+#phone:not(:hover){
+    transition: 0.5s;
+}
+
+#tablet{
+    display: none;
+}
+#print{
+    display: none;
+}
+#pc{
+    display: none;
+}
+#tv{
+    display: none;
+}
+
+/* Tablet */
+
+@media (orientation:landscape) and (min-width : 375px) and (max-width :1024px) {
+    body{
+        background-image: url(midia/imagens/back-tablet.jpg);
+    }
+    #phone{
+        display: none;
+    }
+    #tablet{
+        display: block;
+        margin: auto;
+    }
+    #tablet:hover{
+        scale: 1.2;
+        transition: 0.5s;
+        }
+        #tablet:not(:hover){
+            transition: 0.5s;
+        }        
+    
+}
+
+/* print */
+
+@media print {
+    body{
+        background-image: url(midia/imagens/back-print.jpg);
+    }
+    #phone{
+        display: none;
+    }
+    #print{
+        display: block;
+        margin: auto;
+    }
+}
+
+/* pc */
+@media (orientation:landscape) and (min-width : 1024px) and (max-width : 1300px) {
+    body{
+        background-image: url(midia/imagens/back-pc.jpg);
+    }
+    #phone{
+        display: none;
+    }
+    #pc{
+        display: block;
+        margin: auto;
+    }
+    #pc:hover{
+        scale: 1.2;
+        transition: 0.5s;
+        }
+        #pc:not(:hover){
+            transition: 0.5s;
+        }
+}
+
+/* tv */
+
+@media (orientation:landscape) and (min-width : 1300px){
+    body{
+        background-image: url(midia/imagens/back-tv.jpg);
+    }
+    #phone{
+        display: none;
+    }
+    #tv{
+        display: block;
+        margin: auto;
+    }
+    #tv:hover{
+        scale: 1.2;
+        transition: 0.5s;
+        }
+        #tv:not(:hover){
+            transition: 0.5s;
+        }
+}
